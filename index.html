@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+  <link href="./assets/favicon.ico" rel="icon" type="image/x-icon"/>
+
+  <title>Dean and Sabrina's Pokédex</title>
+</head>
+<body>
+  
+  <header>
+    <h1>Pokémon Pokédex</h1>
+    <h2><span class="instructionBtn">A</span> or <span class="instructionBtn">B</span> to see a random Pokémon</h2>
+    <h2><span class="instructionBtn instructionArrows">→</span> to see the next Pokémon</h2>
+    <h2><span class="instructionBtn instructionArrows">←</span> to see the previous Pokémon</h2>
+  </header>
+  
+  <main>
+    <section>
+      <div class="wrapper container">
+        <div class="gameBox">
+
+          <!-- Music Controls -->
+          <div class="music">
+            <button class="onOff" id="onOff"></button>
+            <p class="btnLabel">⏯</p>
+          </div>
+
+          <!-- screen protector and display -->
+          <div class="screen">
+
+            <!-- Battery indicator -->
+            <div class="battery">
+              <div class="batteryLight"></divclass></div>
+              <p>BATTERY</p>
+            </div>
+
+            <!-- Main LED Dispaly -->
+            <div class="display">
+
+              <!-- Top header container of the display -->
+              <div class="topDisplay">
+                <h3><span id="name"></span></h3>
+              </div>
+
+              <!-- Bottom container of the dispay -->
+              <div class="bottomDisplay">
+
+                <!-- pokemon information -->
+                <div class="leftScreen">
+                  <div class="stats">
+                    <p>Height: <span id="height"></span></p>
+                    <p>Weight: <span id="weight"></span></p>
+                    <p>Type: <span id="type"></span></p>
+                    <p>Pokedex No. <span class="pokemonIndex" id="pokemonIndex">77</span></p>
+                  </div> <!-- .stats END -->
+                </div> <!-- .leftScreen END -->
+  
+                <!-- pokemon sprite -->
+                <div class="rightScreen">
+                  <div class="pokemonSprite">
+                    <img id="sprite" src="" alt="">
+                  </div> <!-- .pokemonSprite END -->
+                </div> <!-- .rightScreen END -->
+              </div><!-- .middleDisplay END -->
+            </div> <!-- .display END -->
+
+          </div> <!-- .screen END -->
+
+          <div class="consoleTitle">
+            <p class="consoleBrand">Junotendo</p>
+            <p class="consoleName">GAMEBOX <span class="tm">&#8482;</span></p>
+          </div>
+
+          <div class="lowerHalf">
+
+            <!-- Dpad buttons section -->
+            <div class="dPad">
+              <div class="btnTop">
+                <button class="btnSquare btnDpadUp" id="btnUp">&uarr;</button>
+              </div>
+              <div class="btnMiddle">
+                <button class="btnSquare btnDpadLeft" id="btnLeft">&larr;</button>
+                <div class="btnCicMid"></div>
+                <button class="btnSquare btnDpadRight" id="btnRight">&rarr;</button>
+              </div>
+              <div class="btnLower">
+                <button class="btnSquare btnDpadDown" id="btnDown">&darr;</button>
+              </div>
+            </div> <!-- .dPad END -->
+          
+            <!-- Buttons A 7 B Section -->
+            <div class="buttons">
+              <div class="btnRight">
+                <button class="btnCircle" id="btnA"></button>
+                <p class="btnLabel">A</p>
+              </div>
+              <div class="btnLeft">
+                <button class="btnCircle" id="btnB"></button>
+                <p class="btnLabel">B</p>
+              </div>
+            </div> <!-- .buttons END -->
+
+          </div> <!-- .lowerHalf END -->
+
+          <div class="bottomSection">
+            <div class="optionButtons">
+              <div class="optBtn select">
+                <p class="optLabel">SELECT</p>
+              </div>
+              <div class="optBtn start">
+                <p class="optLabel">START</p>
+              </div>
+            </div>
+            <div class="speaker">
+              <div class="speakerHole"></div>
+              <div class="speakerHole"></div>
+              <div class="speakerHole"></div>
+              <div class="speakerHole"></div>
+              <div class="speakerHole"></div>
+              <div class="speakerHole"></div>
+            </div>
+          </div>
+
+          <!-- <div class="music">
+              <button class="onOff" id="onOff">⏯</button>
+          </div> -->
+
+        </div> <!-- .gameboy END -->
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Created by <a href="https://github.com/deanglane">Dean</a> and <a href="https://github.com/SabrinaIsTheMan">Sabrina</a> at <a href="https://junocollege.com/">Juno College</a><span class="consoleName"></span></p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

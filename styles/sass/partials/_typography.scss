@@ -1,0 +1,113 @@
+@import './variables';
+
+@font-face {
+  font-family: "Gill Bold I";
+  src: url('../../../font/Gill\ Sans\ Bold\ Italic.otf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Gill Bold";
+  src: url('../../../font/Gill\ Sans\ Bold.otf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "PokemonSolid";
+  src: url('../../../font/PocketMonk-15ze.ttf'),
+  url('../../../font/PokemonGb-RAeo.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "PokemonHollow";
+  src: url('../../../font/Pokemon\ Hollow.ttf'),
+    url('../../../font/PokemonGb-RAeo.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Brand";
+  src: url('../../../font/RoSpritendoSemiboldBeta-vmVwZ.otf');
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: $titleSolid;
+  -webkit-text-stroke: 3px #165DAD;
+  -webkit-text-fill-color: #FFCC01;
+  font-size: 3rem;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+h2,
+h3
+{
+  font-family: 'VT323', monospace;
+}
+
+h2 {
+  font-size: 0.9rem;
+  line-height: 2rem;
+  text-align: center;
+  color: white;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+p,
+select {
+  font-family: 'VT323', monospace;
+  color: $purpleBlue;
+  font-size: clamp(0.875rem, 0.7171rem + 0.7895vw, 1rem);
+}
+
+.stats p {
+  color: black;
+}
+
+.button {
+  font-family: $BrandFont;
+}
+
+.consoleTitle {
+  padding-top: 20px;
+  align-self: flex-start;
+  padding-left: 35px;
+  height: 30px;
+  display: flex;
+  gap: 5px;
+  align-items: flex-end;
+  color: $purpleBlue;
+
+  .consoleBrand {
+    font-size: clamp(0.3rem, 0.1737rem + 0.6316vw, 0.6rem);
+    display: inline;
+    font-family: $BrandFont;
+    letter-spacing: 1px;
+  }
+  
+  .consoleName {
+    font-size: clamp(0.8rem, 0.3474rem + 1.2632vw, 1.2rem);
+    font-family: $consoleFont;
+    display: inline;
+    line-height: 0;
+    padding-bottom: 2px;
+    
+    .tm {
+      font-size: 0.5rem;
+    
+    }
+  }
+}

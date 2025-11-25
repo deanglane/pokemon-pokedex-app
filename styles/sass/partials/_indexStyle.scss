@@ -1,0 +1,364 @@
+@import './variables';
+
+// top header section
+header {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 0.5%;
+
+    span {
+      border: white solid 2px;
+      border-radius: 50%;
+    }
+
+    .instructionBtn {
+      padding: 2px 5px;
+      
+    }
+
+    .instructionArrows {
+      padding: 5px;
+  }
+}
+
+// console container section 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  // gamebox console container
+  .gameBox {
+    background: rgb(218, 213, 210);
+    background: 
+    linear-gradient(270deg, rgba(218, 213, 210, 1) 0%,
+    rgba(255, 255, 255, 1) 2%,
+    rgba(218, 213, 210, 1) 3%,
+    rgba(218, 213, 210, 1) 97%,
+    rgba(255, 255, 255, 1) 99%,
+    rgba(218, 213, 210, 1) 100%);
+    height: auto;
+    min-height: 71.5vh;
+    width: 30vw;
+    border-radius: 20px 20px 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    // music toggle on/off button
+    .music {
+      width: 90%; 
+      display: flex;
+      align-items: center;
+      
+      // btn style
+      .onOff {
+        width: 25px;
+        height: 25px;
+        align-self: flex-start;
+        background-color: $redButtons;
+        padding: 0 1%;
+      }
+      
+      // music button font
+      p {
+        font-size: 1.2rem;
+        padding-left: 5px;
+      }
+    }
+
+    // dark grey screen protector
+    .screen {
+      background-color: #39363D;
+      width: 85%;
+      height: 35%;
+      margin-top: 5px;
+      border-radius: 5px 5px 30px 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      // battery life indicator display
+      .battery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        margin-left: 2%;
+        
+        // battery led
+        .batteryLight {
+          background-color: #be0536;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          padding-bottom: 10px;
+        }
+
+        // battery label
+        p {
+          color: $console;
+          font-size: 0.5rem;  
+        }
+      }
+
+      // LCD screen display
+      .display {
+        width: 90%;
+        height: 80%;
+        margin: 4% 4% 4% 1%;
+        padding: 1%;
+        background-color: #cecdd8;
+        display: flex;
+        flex-direction: column;
+        // overflow: auto; // allows for scrolling content
+
+        // top section of the display
+        .topDisplay h3 {
+          text-align: center;
+          text-transform: uppercase;
+          font-size: 1.25rem;
+          margin-bottom: 2%;
+        }
+
+        // bottom section of the display
+        .bottomDisplay {
+          display: flex;
+          justify-content: center;
+          flex-grow: 1;
+
+          // left & right side of the bottom containers
+          .leftScreen,
+          .rightScreen {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            // left side pokemon stats
+            .stats {
+              width: 100%;
+              height: 100%;
+              border: 2px solid #000;
+              border-radius: 10px;
+              box-shadow: 10px 10px 0px -5px #595959;
+              display: flex;
+              flex-direction: column;
+              text-transform: uppercase;  
+              padding: 10px 10px;
+              
+              p {
+                // font-size: 1rem;
+                }
+            }
+  
+            // pokemon image conatiner
+            .pokemonSprite {
+              width: 100%;
+              height: 70%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+  
+              // pokemon image sprite
+              img {
+                width: 100%;
+                filter: grayscale(100%) brightness(85%);
+              }
+            }
+          }
+        }
+      }
+    } // screen end 
+  } // gameboy end
+} // container end 
+
+// lower half off the gamebox console
+.lowerHalf {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 25px;
+
+  // left side dpad button arrows
+  .dPad {
+    width: auto;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    // top and bottom dpad containers
+    .btnTop,
+    .btnLower {
+      display: flex;
+      justify-content: center;
+
+      // top dpad buttons arrows (Up)
+      .btnDpadUp {
+        border-bottom: 0;
+      }
+
+      // bottom dpad buttons arrows (Down)
+      .btnDpadDown {
+        border-top: 0;
+      }
+
+    }
+
+    // middle dpad containers
+    .btnMiddle {
+      display: flex;
+      justify-content: space-between;
+      background-color: black;
+
+      // left dpad arrow button
+      .btnDpadLeft {
+        border-right: 0;
+        text-align: left;
+      }
+
+      // right dpad arrow button
+      .btnDpadRight {
+        border-left: 0;
+        text-align: right;
+      }
+
+      // middle container of dpad (circle)
+      .btnCicMid {
+        width: 40px;
+        height: 40px;
+        background: rgb(75, 75, 75);
+        background: linear-gradient(315deg, rgba(75, 75, 75, 1) 0%, rgba(0, 0, 0, 1) 38%);
+        border: 0;
+        outline: 1px solid #222;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  // buttons "A" & "B" container
+  .buttons {
+    width: 110px;
+    display: flex;
+    flex-direction: column;
+    
+    // right side buttons "A"
+    .btnRight {
+      align-self: flex-end;
+      position: relative;
+
+      // right side button "A" lalel
+      .btnLabel {
+        position: absolute;
+        bottom: -20px;
+        left: 50px;
+        transform: rotate(-30deg);
+        font-family: $consoleBtnFont;
+      }
+    }
+
+    // left side buttons "B"
+    .btnLeft {
+      position: relative;
+
+      // left side button "B" lalel
+      .btnLabel {
+        position: absolute;
+        bottom: -20px;
+        left: 50px;
+        transform: rotate(-30deg);
+        font-family: $consoleBtnFont;
+      }
+    }
+  }
+}
+
+.bottomSection {
+  width: 90%;
+  height: 140px;
+  display: flex;
+  flex-grow: 1;
+  padding-top: 50px;
+
+  .optionButtons {
+    height: 80px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 70px;
+    gap: 25px;
+    
+    .optBtn {
+      width: 40px;
+      height: 10px;
+      background: rgb(85, 85, 85);
+      background: linear-gradient(0deg, rgba(85, 85, 85, 1) 0%,
+      rgba(85, 85, 85, 1) 0%,
+      rgba(131, 131, 131, 1) 19%,
+      rgba(85, 85, 85, 1) 28%,
+      rgba(85, 85, 85, 1) 76%,
+      rgba(131, 131, 131, 1) 85%,
+      rgba(85, 85, 85, 1) 100%);
+      transform: rotate(-30deg);
+      border-radius: 10px;
+      position: relative;
+
+      .optLabel {
+        position: absolute;
+        bottom: -20px;
+        text-align:center;
+        width: 100%;
+        font-family: $BrandFont;
+        font-size: 0.4rem;
+        letter-spacing: 2px;
+      }
+    }
+  }
+
+  .speaker {
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    transform: rotate(-30deg);
+    margin-bottom: 25px;
+
+    .speakerHole {
+      width: 10px;
+      height: 80px;
+      background: rgb(162, 159, 157);
+      border-left: 2px solid #000;
+      border-radius: 5px;
+      align-self: flex-end;
+
+    }
+  }
+}
+
+
+// cool trick for a sticky footer without position relative and bottom 0
+footer,
+main:after {
+  height: auto;
+}
+
+footer {
+  background-color: #000;
+  text-align: center;
+  height: auto;
+
+  p {
+    color: #fff;
+  }
+}
